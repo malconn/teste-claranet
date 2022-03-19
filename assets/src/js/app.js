@@ -1,3 +1,9 @@
-import togglePassword from "./components/TogglePassword";
+import TogglePassword from "./components/TogglePassword";
+import Submit from "./components/Submit";
+import LoginGoogle from "./components/LoginGoogle";
+import SelectTheme from "./components/SelectThemes";
 
-togglePassword();
+TogglePassword();
+Submit();
+LoginGoogle();
+SelectTheme();

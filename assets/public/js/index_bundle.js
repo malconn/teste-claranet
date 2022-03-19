@@ -12,6 +12,109 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/src/js/components/LoginGoogle.js":
+/*!*************************************************!*\
+  !*** ./assets/src/js/components/LoginGoogle.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LoginGoogle)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils/index.js");
+
+function LoginGoogle() {
+  _utils__WEBPACK_IMPORTED_MODULE_0__.googleBtn.addEventListener("click", HandleGoogleClick);
+}
+
+var HandleGoogleClick = function HandleGoogleClick() {
+  return window.location.href = "https://claranet.com.br";
+};
+
+/***/ }),
+
+/***/ "./assets/src/js/components/SelectThemes.js":
+/*!**************************************************!*\
+  !*** ./assets/src/js/components/SelectThemes.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SelectTheme)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils/index.js");
+
+function SelectTheme() {
+  _utils__WEBPACK_IMPORTED_MODULE_0__.selectTheme.addEventListener("click", HandleSelectTheme);
+}
+
+var HandleSelectTheme = function HandleSelectTheme() {
+  _utils__WEBPACK_IMPORTED_MODULE_0__.selectTheme.value === "dark" ? darkTheme.label() : lightTheme.label();
+  _utils__WEBPACK_IMPORTED_MODULE_0__.selectTheme.value === "dark" ? darkTheme.bg() : lightTheme.bg();
+  _utils__WEBPACK_IMPORTED_MODULE_0__.selectTheme.value === "dark" ? darkTheme.title() : lightTheme.title();
+  _utils__WEBPACK_IMPORTED_MODULE_0__.selectTheme.value === "dark" ? darkTheme.labelTheme() : lightTheme.labelTheme();
+};
+
+var darkTheme = {
+  label: function label() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.labelForget.classList.add("dark");
+  },
+  bg: function bg() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.logon.classList.add("dark");
+  },
+  title: function title() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.title.classList.add("dark");
+  },
+  labelTheme: function labelTheme() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.labelTheme.classList.add("dark");
+  }
+};
+var lightTheme = {
+  label: function label() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.labelForget.classList.remove("dark");
+  },
+  bg: function bg() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.logon.classList.remove("dark");
+  },
+  title: function title() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.title.classList.remove("dark");
+  },
+  labelTheme: function labelTheme() {
+    return _utils__WEBPACK_IMPORTED_MODULE_0__.labelTheme.classList.remove("dark");
+  }
+};
+
+/***/ }),
+
+/***/ "./assets/src/js/components/Submit.js":
+/*!********************************************!*\
+  !*** ./assets/src/js/components/Submit.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Submit)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils/index.js");
+
+function Submit() {
+  try {
+    _utils__WEBPACK_IMPORTED_MODULE_0__.form.addEventListener("submit", HandleSubmit);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+var HandleSubmit = function HandleSubmit(event) {
+  event.preventDefault();
+  window.location.href = "https://claranet.com.br";
+};
+
+/***/ }),
+
 /***/ "./assets/src/js/components/TogglePassword.js":
 /*!****************************************************!*\
   !*** ./assets/src/js/components/TogglePassword.js ***!
@@ -20,11 +123,11 @@ return /******/ (() => { // webpackBootstrap
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ togglePassword)
+/* harmony export */   "default": () => (/* binding */ TogglePassword)
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils/index.js");
 
-function togglePassword() {
+function TogglePassword() {
   try {
     _utils__WEBPACK_IMPORTED_MODULE_0__.inputTogglePassword.addEventListener("click", HandleTogglePassword);
   } catch (error) {
@@ -35,10 +138,10 @@ function togglePassword() {
 var HandleTogglePassword = function HandleTogglePassword(event) {
   var changeTextTogglebtn = {
     hide: function hide() {
-      return event.target.innerText = "Mostrar";
+      return event.target.innerHTML = "Mostrar";
     },
     show: function show() {
-      return event.target.innerText = "Esconder";
+      return event.target.innerHTML = "Esconder";
     }
   };
   var changeAttributeToggle = {
@@ -64,14 +167,24 @@ var HandleTogglePassword = function HandleTogglePassword(event) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "form": () => (/* binding */ form),
-/* harmony export */   "formSubmit": () => (/* binding */ formSubmit),
+/* harmony export */   "googleBtn": () => (/* binding */ googleBtn),
 /* harmony export */   "inputPassword": () => (/* binding */ inputPassword),
-/* harmony export */   "inputTogglePassword": () => (/* binding */ inputTogglePassword)
+/* harmony export */   "inputTogglePassword": () => (/* binding */ inputTogglePassword),
+/* harmony export */   "labelForget": () => (/* binding */ labelForget),
+/* harmony export */   "labelTheme": () => (/* binding */ labelTheme),
+/* harmony export */   "logon": () => (/* binding */ logon),
+/* harmony export */   "selectTheme": () => (/* binding */ selectTheme),
+/* harmony export */   "title": () => (/* binding */ title)
 /* harmony export */ });
 var inputPassword = document.querySelector("[data-password]");
 var inputTogglePassword = document.querySelector("[data-toggle-password]");
 var form = document.querySelector("[data-form]");
-var formSubmit = document.querySelector("[data-submit-form]");
+var googleBtn = document.querySelector("[data-google-login]");
+var selectTheme = document.querySelector("[data-select-theme]");
+var labelForget = document.querySelector("[data-label-forget]");
+var logon = document.querySelector("[data-logon]");
+var title = document.querySelector("[data-title]");
+var labelTheme = document.querySelector("[data-label-theme]");
 
 /***/ })
 
@@ -139,8 +252,17 @@ var __webpack_exports__ = {};
   \******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_TogglePassword__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/TogglePassword */ "./assets/src/js/components/TogglePassword.js");
+/* harmony import */ var _components_Submit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Submit */ "./assets/src/js/components/Submit.js");
+/* harmony import */ var _components_LoginGoogle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/LoginGoogle */ "./assets/src/js/components/LoginGoogle.js");
+/* harmony import */ var _components_SelectThemes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/SelectThemes */ "./assets/src/js/components/SelectThemes.js");
+
+
+
 
 (0,_components_TogglePassword__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_components_Submit__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_components_LoginGoogle__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_components_SelectThemes__WEBPACK_IMPORTED_MODULE_3__["default"])();
 })();
 
 /******/ 	return __webpack_exports__;

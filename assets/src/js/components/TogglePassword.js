@@ -1,5 +1,5 @@
 import { inputTogglePassword, inputPassword } from "../utils";
-export default function togglePassword() {
+export default function TogglePassword() {
   try {
     inputTogglePassword.addEventListener("click", HandleTogglePassword);
   } catch (error) {
@@ -9,10 +9,10 @@ export default function togglePassword() {
 const HandleTogglePassword = (event) => {
   const changeTextTogglebtn = {
     hide() {
-      return (event.target.innerText = "Mostrar");
+      return (event.target.innerHTML = "Mostrar");
     },
     show() {
-      return (event.target.innerText = "Esconder");
+      return (event.target.innerHTML = "Esconder");
     },
   };
   const changeAttributeToggle = {

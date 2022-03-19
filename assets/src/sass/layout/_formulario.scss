@@ -8,6 +8,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  &.dark {
+    background-color: $--brand-color-gray-900;
+  }
+  &__label-theme {
+    &.dark {
+      color: $--brand-color-white;
+    }
+  }
+  &__select-theme {
+    margin: 2rem 0;
+    background-color: $--brand-color-white;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0rem 0.2rem 0.3rem 0.2rem $--brand-color-opacity-400;
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -33,6 +49,9 @@
       margin: 2rem 0;
       font-size: clamp(1.8rem, 5vw, 2.8rem);
       font-weight: 300;
+      &.dark {
+        color: $--brand-color-white;
+      }
     }
   }
   &__form {
@@ -169,6 +188,11 @@
         &__forget {
           cursor: pointer;
           color: $--brand-color-primary;
+        }
+        label {
+          &.dark {
+            color: $--brand-color-white;
+          }
         }
       }
       &__submit {

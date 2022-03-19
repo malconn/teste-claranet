@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claranet - Login</title>
-    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/apple-touch-icon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon-32x32.png" type="image/x-icon">
-    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://portal.claranet.com.br/content/themes/base/images/favicon/apple-touch-icon.png"
+        type="image/x-icon">
+    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon.ico"
+        type="image/x-icon">
+    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon-32x32.png"
+        type="image/x-icon">
+    <link rel="shortcut icon" href="https://portal.claranet.com.br/content/themes/base/images/favicon/favicon-16x16.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="./assets/public/css/index.css">
 </head>
+
 <body>
     <main class="main">
-       <section class="logon">
-           <div class="container logon__container">
-            <div class="logon__brand">
-                <div class="logon__brand__logo">
-                    <svg width="236" height="83" viewBox="0 0 100 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M68.9576 69.6878H21.8124C11.7981 69.6878 3.66309 61.0775 3.66309 50.4893C3.66309 40.3038 11.1916 31.954 20.6706 31.3263C24.7143 21.2119 34.2052 14.4966 44.6476 14.4966C53.746 14.4966 62.1309 19.5182 66.8525 27.6785C67.5661 27.5956 68.2678 27.5601 68.9695 27.5601C79.9471 27.5601 88.8671 37.0113 88.8671 48.6298C88.8671 60.2484 79.9352 69.6878 68.9576 69.6878ZM21.8361 35.0334C13.8795 35.0334 7.42139 41.9619 7.42139 50.4893C7.42139 59.0048 13.8795 65.9452 21.8124 65.9452H68.9576C77.8539 65.9452 85.0969 58.1758 85.0969 48.6298C85.0969 39.0839 77.8539 31.3145 68.9576 31.3145C68.0419 31.3145 67.1023 31.3974 66.1627 31.575L64.7831 31.8356L64.1408 30.592C60.216 22.9766 52.747 18.251 44.6357 18.251C35.3827 18.251 26.986 24.4926 23.7629 33.7898L23.3109 35.0807L21.8361 35.0334Z" fill="#E00000"></path>
-                        <path d="M47.145 39.5339C47.145 40.8486 46.0746 41.9026 44.7664 41.9026C43.4462 41.9026 42.3877 40.8367 42.3877 39.5339V28.7089C42.3877 27.3942 43.4581 26.3401 44.7664 26.3401C46.0865 26.3401 47.145 27.4061 47.145 28.7089V39.5339Z" fill="#E00000"></path>
-                        <path d="M49.2262 30.4736V34.607C52.3185 36.2059 54.4236 39.4273 54.4236 43.1344C54.4236 48.4403 50.1063 52.7396 44.7781 52.7396C39.4499 52.7396 35.1326 48.4403 35.1326 43.1344C35.1326 39.4273 37.2377 36.2177 40.33 34.607V30.4736C35.1445 32.2975 31.4219 37.2244 31.4219 43.016C31.4219 50.3708 37.4042 56.3282 44.79 56.3282C52.1639 56.3282 58.1582 50.3708 58.1582 43.016C58.1463 37.2244 54.4236 32.2975 49.2262 30.4736Z" fill="#E00000"></path>
-                    </svg>
-                </div>
-                <h1 class="logon__brand__title">Bem Vindo!</h1>
-            </div>
-            <form class="logon__form" data-form>
-                <div class="logon__form__group__email">
-                    <span class="logon__form__group__email__span"></span>
-                    <input type="email" name="email-logon" id="email-logon" required autofocus>
-                    <label for="email-logon">E-mail</label>
-                </div>
-                <!--  -->
-                <div class="logon__form__group__password">
-                    <span class="logon__form__group__password__span"></span>
-                    <input type="password" name="password-logon" id="password-logon" required data-password autofocus>
-                    <label for="password">Senha</label>
-                    <a class="logon__form__group__password__toggle-pass" data-toggle-password>
-                        <span>Mostrar</span>
-                    </a>
-                </div>
-                <!--  -->
-                <div class="logon__form__group__checkbox">
-                    <div>
-                        <input type="checkbox" name="checkbox-logon" id="checkbox-logon">
-                        <label for="checkbox-logon">Lembrar-me</label>
+        <section class="logon" data-logon>
+            <label class="logon__label-theme" for="select-theme" data-label-theme>Selecione um tema:</label>
+            <select class="logon__select-theme" name="select-theme" id="select-theme" data-select-theme>
+                <option class="logon__select-theme__option" value="select" selected>Selecionar...</option>
+                <option class="logon__select-theme__option" value="dark">Escuro</option>
+                <option class="logon__select-theme__option" value="light">Claro</option>
+            </select>
+            <div class="container logon__container">
+                <div class="logon__brand">
+                    <div class="logon__brand__logo">
+                        <svg width="236" height="83" viewBox="0 0 100 83" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M68.9576 69.6878H21.8124C11.7981 69.6878 3.66309 61.0775 3.66309 50.4893C3.66309 40.3038 11.1916 31.954 20.6706 31.3263C24.7143 21.2119 34.2052 14.4966 44.6476 14.4966C53.746 14.4966 62.1309 19.5182 66.8525 27.6785C67.5661 27.5956 68.2678 27.5601 68.9695 27.5601C79.9471 27.5601 88.8671 37.0113 88.8671 48.6298C88.8671 60.2484 79.9352 69.6878 68.9576 69.6878ZM21.8361 35.0334C13.8795 35.0334 7.42139 41.9619 7.42139 50.4893C7.42139 59.0048 13.8795 65.9452 21.8124 65.9452H68.9576C77.8539 65.9452 85.0969 58.1758 85.0969 48.6298C85.0969 39.0839 77.8539 31.3145 68.9576 31.3145C68.0419 31.3145 67.1023 31.3974 66.1627 31.575L64.7831 31.8356L64.1408 30.592C60.216 22.9766 52.747 18.251 44.6357 18.251C35.3827 18.251 26.986 24.4926 23.7629 33.7898L23.3109 35.0807L21.8361 35.0334Z"
+                                fill="#E00000"></path>
+                            <path
+                                d="M47.145 39.5339C47.145 40.8486 46.0746 41.9026 44.7664 41.9026C43.4462 41.9026 42.3877 40.8367 42.3877 39.5339V28.7089C42.3877 27.3942 43.4581 26.3401 44.7664 26.3401C46.0865 26.3401 47.145 27.4061 47.145 28.7089V39.5339Z"
+                                fill="#E00000"></path>
+                            <path
+                                d="M49.2262 30.4736V34.607C52.3185 36.2059 54.4236 39.4273 54.4236 43.1344C54.4236 48.4403 50.1063 52.7396 44.7781 52.7396C39.4499 52.7396 35.1326 48.4403 35.1326 43.1344C35.1326 39.4273 37.2377 36.2177 40.33 34.607V30.4736C35.1445 32.2975 31.4219 37.2244 31.4219 43.016C31.4219 50.3708 37.4042 56.3282 44.79 56.3282C52.1639 56.3282 58.1582 50.3708 58.1582 43.016C58.1463 37.2244 54.4236 32.2975 49.2262 30.4736Z"
+                                fill="#E00000"></path>
+                        </svg>
                     </div>
-                    <a class="logon__form__group__checkbox__forget">Esqueceu a senha?</a>
+                    <h1 class="logon__brand__title" data-title>Bem Vindo!</h1>
                 </div>
-                <div class="logon__form__group__submit">
-                    <button type="submit" class="btn logon__form__group__submit__btn-primary" data-submit-form>Entrar</button>
-                    <button type="button" class="btn logon__form__group__submit__btn-google">
-                        <span>
-                            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" alt="">
-                        </span>
-                        Logar com o Google
-                    </button>
-                </div>
-            </form>
-           </div>
-       </section>
-       <section class="picture">
+                <form class="logon__form" data-form>
+                    <div class="logon__form__group__email">
+                        <span class="logon__form__group__email__span"></span>
+                        <input type="email" name="email-logon" id="email-logon" required autofocus>
+                        <label for="email-logon">E-mail</label>
+                    </div>
+                    <!--  -->
+                    <div class="logon__form__group__password">
+                        <span class="logon__form__group__password__span"></span>
+                        <input type="password" name="password-logon" id="password-logon" required data-password
+                            autofocus>
+                        <label for="password">Senha</label>
+                        <a class="logon__form__group__password__toggle-pass" data-toggle-password>
+                            <span>Mostrar</span>
+                        </a>
+                    </div>
+                    <!--  -->
+                    <div class="logon__form__group__checkbox">
+                        <div>
+                            <input type="checkbox" name="checkbox-logon" id="checkbox-logon">
+                            <label for="checkbox-logon" data-label-forget>Lembrar-me</label>
+                        </div>
+                        <a class="logon__form__group__checkbox__forget">Esqueceu a senha?</a>
+                    </div>
+                    <div class="logon__form__group__submit">
+                        <button type="submit" class="btn logon__form__group__submit__btn-primary"
+                            data-submit-form>Entrar</button>
+                        <button type="button" class="btn logon__form__group__submit__btn-google" data-google-login>
+                            <span>
+                                <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
+                                    alt="">
+                            </span>
+                            Logar com o Google
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="picture">
             <img class='picture__img' src="./assets/public/img/logo.png" alt="">
-       </section>
+        </section>
     </main>
     <script src="./assets/public/js/index_bundle.js"></script>
 </body>
+
 </html>
