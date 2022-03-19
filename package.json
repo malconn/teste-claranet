@@ -1,0 +1,34 @@
+{
+  "name": "teste-claranet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
+    "sass": "node-sass --output-style compressed --source-map true --watch ./assets/src/sass/ --output ./assets/public/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malconn/teste-claranet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malconn/teste-claranet/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "node-sass": "^6.0.1"
+  },
+  "homepage": "https://github.com/malconn/teste-claranet#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
