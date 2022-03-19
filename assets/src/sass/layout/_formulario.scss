@@ -137,11 +137,11 @@
         &__toggle-pass {
           position: relative;
           display: block;
-          color: $--brand-color-primary;
+          color: $--brand-color-primary-400;
           bottom: 44px;
           text-align: right;
+          background: $--brand-color-white;
           left: 80%;
-          // font-weight: var(--fontWeightRegular);
           width: 48px;
           cursor: pointer;
           & span {
