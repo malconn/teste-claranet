@@ -1,5 +1,4 @@
-import { inputTogglePassword } from "../utils";
-import { inputPassword } from "../utils";
+import { inputTogglePassword, inputPassword } from "../utils";
 export default function togglePassword() {
   try {
     inputTogglePassword.addEventListener("click", HandleTogglePassword);
@@ -7,8 +6,28 @@ export default function togglePassword() {
     console.error(error);
   }
 }
-const HandleTogglePassword = () => {
-  return inputPassword.getAttribute("type") === "password"
-    ? inputPassword.setAttribute("type", "text")
-    : inputPassword.setAttribute("type", "password");
+const HandleTogglePassword = (event) => {
+  const changeTextTogglebtn = {
+    hide() {
+      return (event.target.innerText = "Mostrar");
+    },
+    show() {
+      return (event.target.innerText = "Esconder");
+    },
+  };
+  const changeAttributeToggle = {
+    text() {
+      return inputPassword.setAttribute("type", "text");
+    },
+    password() {
+      return inputPassword.setAttribute("type", "password");
+    },
+  };
+  inputPassword.getAttribute("type") === "password"
+    ? changeAttributeToggle.text()
+    : changeAttributeToggle.password();
+
+  inputPassword.getAttribute("type") === "password"
+    ? changeTextTogglebtn.hide()
+    : changeTextTogglebtn.show();
 };

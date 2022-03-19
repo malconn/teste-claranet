@@ -24,7 +24,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils/index.js");
 
-
 function togglePassword() {
   try {
     _utils__WEBPACK_IMPORTED_MODULE_0__.inputTogglePassword.addEventListener("click", HandleTogglePassword);
@@ -33,8 +32,25 @@ function togglePassword() {
   }
 }
 
-var HandleTogglePassword = function HandleTogglePassword() {
-  return _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.getAttribute("type") === "password" ? _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.setAttribute("type", "text") : _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.setAttribute("type", "password");
+var HandleTogglePassword = function HandleTogglePassword(event) {
+  var changeTextTogglebtn = {
+    hide: function hide() {
+      return event.target.innerText = "Mostrar";
+    },
+    show: function show() {
+      return event.target.innerText = "Esconder";
+    }
+  };
+  var changeAttributeToggle = {
+    text: function text() {
+      return _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.setAttribute("type", "text");
+    },
+    password: function password() {
+      return _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.setAttribute("type", "password");
+    }
+  };
+  _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.getAttribute("type") === "password" ? changeAttributeToggle.text() : changeAttributeToggle.password();
+  _utils__WEBPACK_IMPORTED_MODULE_0__.inputPassword.getAttribute("type") === "password" ? changeTextTogglebtn.hide() : changeTextTogglebtn.show();
 };
 
 /***/ }),
@@ -47,11 +63,15 @@ var HandleTogglePassword = function HandleTogglePassword() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "form": () => (/* binding */ form),
+/* harmony export */   "formSubmit": () => (/* binding */ formSubmit),
 /* harmony export */   "inputPassword": () => (/* binding */ inputPassword),
 /* harmony export */   "inputTogglePassword": () => (/* binding */ inputTogglePassword)
 /* harmony export */ });
 var inputPassword = document.querySelector("[data-password]");
 var inputTogglePassword = document.querySelector("[data-toggle-password]");
+var form = document.querySelector("[data-form]");
+var formSubmit = document.querySelector("[data-submit-form]");
 
 /***/ })
 
