@@ -1,0 +1,185 @@
+@import "../base/reset";
+
+.logon {
+  width: 100%;
+  background-color: $--brand-color-gray-100;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__logo {
+      width: 15rem;
+      height: 15rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      padding: 3rem;
+      border-radius: 50%;
+      box-shadow: 0.1rem 0.5rem 0.7rem 0.2rem $--brand-color-opacity-300;
+      margin-bottom: 2rem;
+    }
+    &__title {
+      margin: 2rem 0;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 300;
+    }
+  }
+  &__form {
+    &__group {
+      &__email {
+        position: relative;
+        &__span {
+          background: url(https://portal.claranet.com.br/content/images/icon/icon-email.png)
+            no-repeat;
+          padding: 1.7rem;
+          background-position: 8px 11px;
+          position: absolute;
+          width: 15px;
+          height: 19px;
+        }
+        & input {
+          background: $--brand-color-white;
+          border: 1px solid $--brand-color-gray-200;
+          box-sizing: border-box;
+          border-radius: 3px;
+          width: 300px;
+          height: 44px;
+          padding: 16px 10px 10px 35px;
+          margin-bottom: 15px;
+          transition: border 200ms ease;
+          -moz-transition: border 200ms ease;
+          -webkit-transition: border 200ms ease;
+          font-size: 12px;
+          color: $--brand-color-gray-900;
+          & ~ label {
+            font-size: 14px;
+            color: #9fa2b4;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 5px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+            padding: 10px 10px 10px 31px;
+          }
+          &:focus {
+            border: 1px solid $--brand-color-primary;
+            outline: none;
+            ~ label {
+              top: -5px;
+              font-size: 11px;
+              color: #9fa2b4;
+            }
+          }
+        }
+      }
+      &__password {
+        position: relative;
+        &__span {
+          background: url(https://portal.claranet.com.br/content/images/icon/icon-password.png)
+            no-repeat;
+          padding: 1.7rem;
+          background-position: 8px 11px;
+          position: absolute;
+          width: 15px;
+          height: 19px;
+        }
+        & input {
+          background: $--brand-color-white;
+          border: 1px solid $--brand-color-gray-200;
+          box-sizing: border-box;
+          border-radius: 3px;
+          width: 300px;
+          height: 44px;
+          padding: 16px 10px 10px 35px;
+          margin-bottom: 15px;
+          transition: border 200ms ease;
+          -moz-transition: border 200ms ease;
+          -webkit-transition: border 200ms ease;
+          font-size: 12px;
+          color: $--brand-color-gray-900;
+          & ~ label {
+            font-size: 14px;
+            color: #9fa2b4;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 5px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+            padding: 10px 10px 10px 31px;
+          }
+          &:focus {
+            border: 1px solid $--brand-color-primary;
+            outline: none;
+            ~ label {
+              top: -5px;
+              font-size: 11px;
+              color: #9fa2b4;
+            }
+          }
+        }
+        &__toggle-pass {
+          position: relative;
+          display: block;
+          color: $--brand-color-primary;
+          bottom: 44px;
+          text-align: right;
+          left: 80%;
+          // font-weight: var(--fontWeightRegular);
+          width: 48px;
+          cursor: pointer;
+          & span {
+            font-size: clamp(1.2rem, 5vw, 1.2rem);
+          }
+        }
+      }
+      &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        &__forget {
+          cursor: pointer;
+          color: $--brand-color-primary;
+        }
+      }
+      &__submit {
+        &__btn-primary {
+          color: $--brand-color-white;
+          margin: 2rem 0;
+          background: $--brand-color-primary;
+        }
+        &__btn-google {
+          color: $--brand-color-white;
+          margin: 2rem 0;
+          background: $--brand-color-blue-500;
+          & span {
+            width: 5rem;
+            background: $--brand-color-white;
+            position: absolute;
+            padding: 1rem;
+            left: 0;
+            border-radius: 0.8rem;
+            & img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,12 @@
-$--brand-font-primary: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+$--brand-font-primary: "Roboto", sans-serif;
 
 $--brand-color-white: #ffffff;
 $--brand-color-black: #000000;
 $--brand-color-primary: #e21e26;
-$--brand-color-gray-100: #f7f7f7;
+$--brand-color-blue-400: #c5dae7;
+$--brand-color-blue-500: #4484ef;
+$--brand-color-gray-100: #f7f8fc;
 $--brand-color-gray-200: #e7e7e7;
 $--brand-color-gray-500: #828282;
 $--brand-color-gray-800: #3d3d3d;
