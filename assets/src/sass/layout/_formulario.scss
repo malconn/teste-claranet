@@ -84,6 +84,13 @@
               color: #9fa2b4;
             }
           }
+          &:valid {
+            ~ label {
+              top: -5px;
+              font-size: 11px;
+              color: #9fa2b4;
+            }
+          }
         }
       }
       &__password {
@@ -127,6 +134,13 @@
           &:focus {
             border: 1px solid $--brand-color-primary;
             outline: none;
+            ~ label {
+              top: -5px;
+              font-size: 11px;
+              color: #9fa2b4;
+            }
+          }
+          &:valid {
             ~ label {
               top: -5px;
               font-size: 11px;

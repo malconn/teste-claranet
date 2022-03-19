@@ -5,5 +5,7 @@
         "package-lock.json": true,
         "package.json": true,
         "README.md":true,
+        ".babelrc":true,
+        "webpack.config.js":true,
     }
 }

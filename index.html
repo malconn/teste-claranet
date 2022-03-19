@@ -28,15 +28,15 @@
             <form class="logon__form">
                 <div class="logon__form__group__email">
                     <span class="logon__form__group__email__span"></span>
-                    <input type="email" name="email-logon" id="email-logon" required>
+                    <input type="email" name="email-logon" id="email-logon" required autofocus>
                     <label for="email-logon">E-mail</label>
                 </div>
                 <!--  -->
                 <div class="logon__form__group__password">
                     <span class="logon__form__group__password__span"></span>
-                    <input type="password" name="password-logon" id="password-logon" required>
+                    <input type="password" name="password-logon" id="password-logon" required data-password autofocus>
                     <label for="password">Senha</label>
-                    <a class="logon__form__group__password__toggle-pass">
+                    <a class="logon__form__group__password__toggle-pass" data-toggle-password>
                         <span>Mostrar</span>
                     </a>
                 </div>
@@ -64,5 +64,6 @@
             <img class='picture__img' src="./assets/public/img/logo.png" alt="">
        </section>
     </main>
+    <script src="./assets/public/js/index_bundle.js"></script>
 </body>
 </html>
